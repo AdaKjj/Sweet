@@ -155,6 +155,7 @@ static CGFloat margin = 20.f;
     self.view.backgroundColor = [UIColor whiteColor];
     if (![USERDEFAULTS objectForKey:@"Session"]) {
         LoginVC *loginVC = [[LoginVC alloc] init];
+        loginVC.isFromCircle = YES;
         loginVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:loginVC animated:YES];
     }

@@ -254,6 +254,9 @@
 }
 
 - (void)backBtnPressed {
+    if (_isFromCircle) {
+        self.tabBarController.selectedIndex = 0;
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 
